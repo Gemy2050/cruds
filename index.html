@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <title>CRUDS</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2>CRUDS</h2>
+      <p>Product Management System</p>
+    </header>
+
+    <div class="form1">
+      <input type="text" placeholder="title" class="title">
+      <input type="text" class="category" placeholder="category">
+      <input type="number" placeholder="price" class="price money">
+      <input type="number" placeholder="taxes" class="tax money" >
+      <input type="number" placeholder="ads" class="ads money" >
+      <input type="number" placeholder="discount" class="discount money" >
+      <span class="total">Total: <span class="total-price"></span></span>
+      <input type="number" class="count" placeholder="count">
+      <button class="create-btn">Create</button>
+      <button class="update-btn">Update</button>
+    </div>
+    
+    <div class="form2">
+      <input type="text" placeholder="search by title" class="searchTitle">
+      <input type="text" placeholder="search by category" class="searchCategory">
+      <button class="search-title search">Search By Title</button>
+      <button class="search-category search">Search By Category</button>
+      <button class="delete-all">Delete All (<span class="products-count">0</span>)</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Taxes</th>
+        <th>ADS</th>
+        <th>Discount</th>
+        <th>Total</th>
+        <th>Update</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
+  </div>
+
+
+
+  <script src="main.js"></script>
+</body>
+</html>
