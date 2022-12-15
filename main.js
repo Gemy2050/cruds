@@ -58,7 +58,6 @@ createBtn.onclick = function () {
   total.innerHTML = "";
   total.parentElement.style.backgroundColor = "red";
 };
-
 // ******************************************* Create Data *******************************************
 function createData(arrayOfData) {
   if (count.value == "" || count < 1) count.value = 1;
@@ -80,12 +79,10 @@ function createData(arrayOfData) {
     getDataFromArray(arrayOfData);
   }
 }
-
 // *************************************** Add Data To Local Storage **************************************
 function addDataToLocalStorage(arr) {
   window.localStorage.setItem("data", JSON.stringify(arr));
 }
-
 // *************************************** Get Data From Local Storage *************************************
 function getDataFromLocalStorage() {
   let output = window.localStorage.getItem("data");
@@ -94,7 +91,6 @@ function getDataFromLocalStorage() {
     getDataFromArray(data);
   }
 }
-
 // ******************************************* Show Data in Page *******************************************
 function getDataFromArray(arr) {
   tableBody.innerHTML = "";
@@ -161,13 +157,12 @@ document.addEventListener("click", (e) => {
 
 // ******************************************* Delete All Element *******************************************
 deleteAllBtn.onclick = function () {
-  window.localStorage.clear();
+  localStorage.removeItem("data");
   array = [];
   id = 0;
   getDataFromArray(array);
   productCount.innerHTML = array.length;
 };
-
 // ******************************************* Search *******************************************
 function search() {
   titleSearchBtn.onclick = function () {
@@ -200,7 +195,6 @@ function search() {
     productCount.innerHTML = items.length;
   };
 }
-
 search();
 
 // ******************************************* Update *******************************************
@@ -253,5 +247,4 @@ document.addEventListener("click", (e) => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 });
-
-
+// *****************************************************************
